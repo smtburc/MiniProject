@@ -39,3 +39,31 @@ function resetImage() {
 
 }
 
+function doRed() {
+
+    if (imageIsLoaded()) {     // check if image is loaded
+        filterRed();	                      // function performs the grayscale work
+        filteredImage.drawTo(canvas);	          // display image
+    }
+
+}
+
+function filterRed() {
+    filteredImage = new SimpleImage(image.getWidth(), image.getHeight());
+    for (var pixel of image.values()) {
+        var x = pixel.getX();
+        var y = pixel.getY();
+        var filteredPixel = filteredImage.getPixel(x, y);
+        var avarage = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / 3;
+        if (avarage < 128) {
+            filteredPixel.setRed(avarage * 2);
+            filteredPixel.setGreen(0);
+            filteredPixel.setBlue(0);
+        } else {
+            filteredPixel.setRed(255);
+            filteredPixel.setGreen(avarage * 2 - 255);
+            filteredPixel.setBlue(avarage * 2 - 255);
+        }
+    }
+
+}
