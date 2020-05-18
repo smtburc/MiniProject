@@ -1,10 +1,28 @@
+html {
+
+    background-image: url('//live.staticflickr.com/65535/49903088107_faf4871f74_k.jpg');
+}
 
 body {
-    font-family: OpenSans, Arial, sans-serif;
+
     width: 1024px;
     margin: auto;
 }
 
 canvas {
     border: solid 1px;
+    opacity: 1;
+}
+
+.card-title {
+
+    margin-top: 0;
+}
+
+.btn {
+    width: 180px;
+}
+
+.row {
+    opacity: 0.9;
 }

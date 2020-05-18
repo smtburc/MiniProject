@@ -7,29 +7,47 @@
     <script src="http://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
     <script src="script.js"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
 
 
 </head>
 <body>
-<p>
-<h1>MiniProject: Image Filters on the Web </h1>
-</p>
-<p>
-    <canvas id="canvas"></canvas>
-</p>
-<p>
-<h3>Load Image</h3></p>
-<p><input id="finput" type="file" onchange="uploadFile()"/></p>
-<p>
-<h3>Choose Filter</h3></p>
-<p>
-    <input type="button" value="Grayscale" onclick="doGray();"/>
-    <input type="button" value="Red" onclick="doRed();"/>
-    <input type="button" value="Gray Centered Red" onclick="doGrayCenteredRed()"/>
-</p>
-<p><input type="button" value="Reset Image" onclick="resetImage();"/></p>
 
+<div class="row">
+    <div class="col s12 m12">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <span class="card-title">MiniProject: Image Filters on the Web</span>
+                <p>
+                    <canvas id="canvas"></canvas>
+                </p>
+            </div>
+            <div class="card-action">
+                <h5 class="card-title white-text">Load Image</h5>
+                <input id="finput" type="file" onchange="uploadFile()"/>
+            </div>
+            <div class="card-action">
+                <h5 class="card-title white-text">Choose Filter</h5>
+                <input type="button" class="waves-effect waves-light btn" value="Grayscale" onclick="doGray();"/>
+                <input type="button" class="waves-effect waves-light btn" value="Red" onclick="doRed();"/>
+                <input type="button" class="waves-effect waves-light btn" value="Gray Centered Red"
+                       onclick="doGrayCenteredRed()"/>
+            </div>
+            <div class="card-action">
+                <input type="button" class="waves-effect waves-light btn" value="Reset Image" onclick="resetImage();"/>
+            </div>
+        </div>
+    </div>
+</div>
 
+<footer class="page-footer teal lighten-2">
+
+    <div class="footer-copyright">
+        <div class="container">
+            © 2020 Copyright Samet Burç
+        </div>
+    </div>
+</footer>
 </body>
 </html>
