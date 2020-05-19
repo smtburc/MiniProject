@@ -12,6 +12,7 @@ body {
 canvas {
     border: solid 1px;
     opacity: 1;
+    max-width: 940px;
 }
 
 .card-title {
