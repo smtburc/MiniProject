@@ -48,6 +48,13 @@ function doRainbow() {
     }
 }
 
+function doBlur() {
+    if (imageIsLoaded()) {     // check if image is loaded
+        filterBlur();	                      // function performs the grayscale work
+        filteredImage.drawTo(canvas);	          // display image
+    }
+}
+
 //filter methots
 
 function filterGray() {
@@ -124,6 +131,32 @@ function filterRainbow() {
 
         }
     }
+}
+
+function filterBlur() {
+    filteredImage = new SimpleImage(image.getWidth(), image.getHeight());
+    for (var filteredPixel of filteredImage.values()) {
+        var x = filteredPixel.getX();
+        var y = filteredPixel.getY();
+
+        var randomX = (Math.random() * 10) - 5;
+        var randomY = (Math.random() * 10) - 5;
+        if (x + randomX < 0) {
+            randomX = 0 - x;
+        } else if (x + randomX >= image.getWidth()) {
+            randomX = image.getWidth() - x - 1;
+        }
+        if (y + randomY < 0) {
+            randomY = 0 - y;
+        } else if (y + randomY >= image.getHeight()) {
+            randomY = image.getHeight() - y - 1;
+        }
+        var pixel = image.getPixel(x + randomX, y + randomY);
+        filteredPixel.setRed(pixel.getRed());
+        filteredPixel.setGreen(pixel.getGreen());
+        filteredPixel.setBlue(pixel.getBlue());
+    }
+
 }
 
 //color methots
