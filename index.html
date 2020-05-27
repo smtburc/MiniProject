@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Image Filters on the Web</title>
 
     <script src="http://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
-    <link rel="stylesheet" type="text/css"
-          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
+          rel="stylesheet"
+          type="text/css"/>
 
     <script src="script.js"></script>
 
-    <link rel="stylesheet" href="style.css">
+    <link href="style.css" rel="stylesheet">
 
 
 </head>
@@ -23,31 +24,32 @@
 
         </div>
         <div class="content">
-            <div class="card" id="card"><i id="canvas-icon" class="canvas-icon material-icons">insert_photo</i>
+            <div class="card" id="card"><i class="canvas-icon material-icons" id="canvas-icon">insert_photo</i>
                 <canvas id="canvas" style="height: 250px;"></canvas>
-                <input id="finput" type="file" onchange="uploadFile();clearIcon();"/>
-                <input type="button" class="btn btn-secondary load-image color-info" value="Upload Image"
-                       onclick="document.getElementById('finput').click();"/>
-                <input type="button" class="btn btn-secondary reset-image color-danger" value="Reset Filter"
-                       onclick="resetImage();"/>
+                <input id="finput" onchange="uploadFile();clearIcon();" type="file"/>
+                <input class="btn btn-secondary load-image color-info"
+                       onclick="document.getElementById('finput').click();" type="button"
+                       value="Upload Image"/>
+                <input class="btn btn-secondary reset-image color-danger" onclick="resetImage();" type="button"
+                       value="Reset Filter"/>
             </div>
             <div class="inner">
         <span class="tittle">
-          Choose Filter</span><br></br>
-                <input type="button" value="Grayscale" class="btn btn-default" onclick="doGray();"/>
-                <input type="button" value="Red" class="btn btn-danger" onclick="doRed();"/>
+          Choose Filter</span><br/>
+                <input class="btn btn-default" onclick="doGray();" type="button" value="Grayscale"/>
+                <input class="btn btn-danger" onclick="doRed();" type="button" value="Red"/>
 
-                <input type="button" value="Rainbow"
-                       class="btn btn-success" onclick="doRainbow()"/>
-                <input type="button" value="Special Red" class="btn btn-warning"
-                       onclick="doGrayCenteredRed()"/>
-                <input type="button" value="Blur"
-                       class="btn btn-info" onclick="doBlur()"/>
+                <input class="btn btn-success" onclick="doRainbow()"
+                       type="button" value="Rainbow"/>
+                <input class="btn btn-warning" onclick="doGrayCenteredRed()" type="button"
+                       value="Special Red"/>
+                <input class="btn btn-info" onclick="doBlur()"
+                       type="button" value="Blur"/>
             </div>
         </div>
     </div>
 
 </div>
-</div>
+
 </body>
 </html>
