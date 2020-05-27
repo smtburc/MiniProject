@@ -18,6 +18,12 @@ function resetImage() {
     image.drawTo(canvas);
 }
 
+function clearIcon() {
+    var icon = document.getElementById('canvas-icon');
+    icon.style = "visibility:hidden;";
+    canvas.style.height = "";
+}
+
 //doMethots
 
 function doGray() {

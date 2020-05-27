@@ -1,57 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Image Filters on the Web</title>
 
     <script src="http://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>
+
     <script src="script.js"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
 
 
 </head>
 <body>
 
-<div class="row">
-    <div class="col s12 m12">
-        <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-                <span class="card-title">MiniProject: Image Filters on the Web</span>
-                <p>
-                    <canvas id="canvas"></canvas>
-                </p>
+<div class="single-page">
+    <div class="panel">
+        <div class="header">
+            Image Filters on the Web
+
+        </div>
+        <div class="content">
+            <div class="card" id="card"><i id="canvas-icon" class="canvas-icon material-icons">insert_photo</i>
+                <canvas id="canvas" style="height: 250px;"></canvas>
+                <input id="finput" type="file" onchange="uploadFile();clearIcon();"/>
+                <input type="button" class="btn btn-secondary load-image color-info" value="Load Image"
+                       onclick="document.getElementById('finput').click();"/>
+                <input type="button" class="btn btn-secondary reset-image color-danger" value="Reset Image"
+                       onclick="resetImage();"/>
             </div>
-            <div class="card-action">
-                <h5 class="card-title white-text">Load Image</h5>
-                <input id="finput" type="file" onchange="uploadFile()"/>
-            </div>
-            <div class="card-action">
-                <h5 class="card-title white-text">Choose Filter</h5>
-                <input type="button" class="waves-effect waves-light btn" value="Grayscale" onclick="doGray();"/>
-                <input type="button" class="waves-effect waves-light btn" value="Red" onclick="doRed();"/>
-                <input type="button" class="waves-effect waves-light btn" value="Gray Centered Red"
+            <div class="inner">
+        <span class="tittle">
+          Choose Filter</span><br></br>
+                <input type="button" value="Grayscale" class="btn btn-default" onclick="doGray();"/>
+                <input type="button" value="Red" class="btn btn-danger" onclick="doRed();"/>
+
+                <input type="button" value="Rainbow"
+                       class="btn btn-success" onclick="doRainbow()"/>
+                <input type="button" value="Special Red" class="btn btn-warning"
                        onclick="doGrayCenteredRed()"/>
-                <input type="button" class="waves-effect waves-light btn" value="Rainbow"
-                       onclick="doRainbow()"/>
-                <input type="button" class="waves-effect waves-light btn" value="Blur"
-                       onclick="doBlur()"/>
-            </div>
-            <div class="card-action">
-                <input type="button" class="waves-effect waves-light btn" value="Reset Image" onclick="resetImage();"/>
+                <input type="button" value="Blur"
+                       class="btn btn-info" onclick="doBlur()"/>
             </div>
         </div>
     </div>
+
 </div>
-
-<footer class="page-footer teal lighten-2">
-
-    <div class="footer-copyright">
-        <div class="container">
-            © 2020 Copyright Samet Burç
-        </div>
-    </div>
-</footer>
+</div>
 </body>
 </html>
