@@ -173,7 +173,7 @@ body {
 }
 
 .reset-image {
-    width: 49.5%;
+    width: calc(50% - 1px);
     border-radius: 0 0 5px 0;
     float: right;
     margin: 0;
