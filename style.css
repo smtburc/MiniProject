@@ -62,7 +62,7 @@ body {
 }
 
 .inner {
-    height: 250px;
+    min-height: 250px;
     margin: auto;
     margin-left: 250px;
 }
