@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Filters on the Web</title>
+
+    <script src="http://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
+          rel="stylesheet"
+          type="text/css"/>
+
+
+    <link href="style.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+<div class="single-page">
+
+    <div class="panel" style="width: 1050px;">
+        <div class="header tab-header">
+            <span class="tab-title">Steganography:</span>
+            <ul class="tab-list">
+                <li class="tab-item active">Hide Image</li>
+                <li class="tab-item">Show Image</li>
+            </ul>
+
+        </div>
+        <div class="panel-content tab-content active">
+
+            <div class="inner inner-left-margin inner-right-margin">
+                <div class="card" id="card1"><i class="canvas-icon material-icons" id="canvas-icon1">insert_photo</i>
+                    <canvas class="card-canvas" id="canvas1" style="height: 200px;"></canvas>
+                    <input class="hidden-finput" id="finput1" onchange="uploadFile1();clearIcon1();" type="file"/>
+                    <input class="btn btn-secondary load-image color-info"
+                           onclick="document.getElementById('finput1').click();" type="button"
+                           value="Upload Image"/>
+                    <input class="btn btn-secondary reset-image color-danger" onclick="clearImage1();" type="button"
+                           value="Clear Image"/>
+
+                </div>
+                <div class="card" id="card2"><i class="canvas-icon material-icons" id="canvas-icon2">insert_photo</i>
+                    <canvas class="card-canvas" id="canvas2" style="height: 200px;"></canvas>
+                    <input class="hidden-finput" id="finput2" onchange="uploadFile2();clearIcon2();" type="file"/>
+                    <input class="btn btn-secondary load-image color-info"
+                           onclick="document.getElementById('finput2').click();" type="button"
+                           value="Upload Image"/>
+                    <input class="btn btn-secondary reset-image color-danger" onclick="clearImage2();" type="button"
+                           value="Clear Image"/>
+
+                </div>
+                <div style="float: left">
+
+
+                    <input class="btn btn-info" onclick="doHide();" style="margin-top: 100px;"
+                           type="button" value="Hide"/>
+                </div>
+                <div class="card" id="card3" style="float: right;margin-right: 0;"><i
+                        class="canvas-icon material-icons" id="canvas-icon3">insert_photo</i>
+                    <canvas class="card-canvas" id="canvas3" style="height: 200px;"></canvas>
+
+                    <input class="btn btn-secondary load-image-full color-danger" onclick="clearImage3();" type="button"
+                           value="Clear Image"/>
+
+                </div>
+            </div>
+        </div>
+        <div class="panel-content tab-content">
+
+            <div class="inner inner-left-margin inner-right-margin">
+                <div class="card" id="card4"><i class="canvas-icon material-icons" id="canvas-icon4">insert_photo</i>
+                    <canvas class="card-canvas" id="canvas4" style="height: 200px;"></canvas>
+                    <input class="hidden-finput" id="finput4" onchange="uploadFile4();clearIcon4();" type="file"/>
+                    <input class="btn btn-secondary load-image color-info"
+                           onclick="document.getElementById('finput4').click();" type="button"
+                           value="Upload Image"/>
+                    <input class="btn btn-secondary reset-image color-danger" onclick="clearImage4();" type="button"
+                           value="Clear Image"/>
+                </div>
+                <div style="float: left">
+
+
+                    <input class="btn btn-info" style="margin-top: 100px;margin-right: 28px" onclick="doShow()"
+                           type="button" value="Show"/>
+                </div>
+                <div class="card" id="card5"><i class="canvas-icon material-icons" id="canvas-icon5">insert_photo</i>
+                    <canvas class="card-canvas" id="canvas5" style="height: 200px;"></canvas>
+                    <input class="btn btn-secondary load-image-full color-danger" onclick="clearImage5();" type="button"
+                           value="Clear Image"/>
+
+                </div>
+
+                <div class="card" id="card6" style="float: right;margin-right: 0;"><i
+                        class="canvas-icon material-icons" id="canvas-icon6">insert_photo</i>
+                    <canvas class="card-canvas" id="canvas6" style="height: 200px;"></canvas>
+                    <input class="btn btn-secondary load-image-full color-danger" onclick="clearImage6();" type="button"
+                           value="Clear Image"/>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="steganography.js"></script>
+<script src="tab.js"></script>
+</body>
+</html>

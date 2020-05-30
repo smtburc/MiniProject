@@ -9,7 +9,7 @@
           rel="stylesheet"
           type="text/css"/>
 
-    <script src="script.js"></script>
+    <script src="filter.js"></script>
 
     <link href="style.css" rel="stylesheet">
 
@@ -18,33 +18,36 @@
 <body>
 
 <div class="single-page">
-    <div class="panel">
+    <div class="panel" style=" max-width: 630px;">
         <div class="header">
             Image Filters on the Web
 
         </div>
-        <div class="content">
-            <div class="card" id="card"><i class="canvas-icon material-icons" id="canvas-icon">insert_photo</i>
-                <canvas id="canvas" style="height: 200px;"></canvas>
-                <input id="finput" onchange="uploadFile();clearIcon();" type="file"/>
-                <input class="btn btn-secondary load-image color-info"
-                       onclick="document.getElementById('finput').click();" type="button"
-                       value="Upload Image"/>
-                <input class="btn btn-secondary reset-image color-danger" onclick="resetImage();" type="button"
-                       value="Reset Filter"/>
-            </div>
-            <div class="inner">
-        <span class="tittle">
-            Choose Filter</span><br></br>
-                <input class="btn btn-default" onclick="doGray();" type="button" value="Grayscale"/>
-                <input class="btn btn-danger" onclick="doRed();" type="button" value="Red"/>
+        <div class="panel-content">
 
-                <input class="btn btn-success" onclick="doRainbow()"
-                       type="button" value="Rainbow"/>
-                <input class="btn btn-warning" onclick="doGrayCenteredRed()" type="button"
-                       value="Special Red"/>
-                <input class="btn btn-info" onclick="doBlur()"
-                       type="button" value="Blur"/>
+            <div class="inner inner-left-margin">
+                <div class="card" id="card"><i class="canvas-icon material-icons" id="canvas-icon">insert_photo</i>
+                    <canvas id="canvas" class="card-canvas" style="height: 200px;"></canvas>
+                    <input id="finput" class="hidden-finput" onchange="uploadFile();clearIcon();" type="file"/>
+                    <input class="btn btn-secondary load-image color-info"
+                           onclick="document.getElementById('finput').click();" type="button"
+                           value="Upload Image"/>
+                    <input class="btn btn-secondary reset-image color-danger" onclick="resetImage();" type="button"
+                           value="Reset Filter"/>
+                </div>
+                <div class="inner-content">
+                <span class="tittle">
+            Choose Filter</span><br></br>
+                    <input class="btn btn-default" onclick="doGray();" type="button" value="Grayscale"/>
+                    <input class="btn btn-danger" onclick="doRed();" type="button" value="Red"/>
+
+                    <input class="btn btn-success" onclick="doRainbow()"
+                           type="button" value="Rainbow"/>
+                    <input class="btn btn-warning" onclick="doGrayCenteredRed()" type="button"
+                           value="Special Red"/>
+                    <input class="btn btn-info" onclick="doBlur()"
+                           type="button" value="Blur"/>
+                </div>
             </div>
         </div>
     </div>

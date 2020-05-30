@@ -10,14 +10,14 @@ body {
 }
 
 .panel {
-    max-width: 630px;
+
     margin: auto;
-    width: 80%;
+    width: 85%;
 
 
 }
 
-.content {
+.panel-content {
     background: #fff;
     box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
     border-radius: 5px;
@@ -51,12 +51,11 @@ body {
     z-index: 1;
     width: 300px;
     max-width: 300px;
-    margin-left: -80px;
+    margin-right: 30px;
     float: left;
 }
 
-#canvas {
-
+.card-canvas {
     width: 100%;
     border-radius: 5px 5px 0 0;
 }
@@ -64,7 +63,16 @@ body {
 .inner {
     min-height: 250px;
     margin: auto;
-    margin-left: 250px;
+}
+
+.inner-left-margin {
+
+    margin-left: -80px;
+}
+
+.inner-right-margin {
+
+    margin-right: -80px;
 }
 
 .btn {
@@ -172,6 +180,13 @@ body {
 
 }
 
+.load-image-full {
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+    margin: 0;
+
+}
+
 .reset-image {
     width: calc(50% - 1px);
     border-radius: 0 0 5px 0;
@@ -179,10 +194,7 @@ body {
     margin: 0;
 }
 
-#finput {
-    visibility: hidden;
-    position: absolute;
-}
+
 
 .tittle {
 
@@ -211,4 +223,50 @@ body {
     margin-top: 50px;
     margin-left: 100px;
 
+}
+
+
+.hidden-finput {
+    visibility: hidden;
+    position: absolute;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-list {
+    float: left;
+    background: transparent;
+    margin: 0;
+    display: flex;
+    list-style: none;
+    padding-left: 10px;
+}
+
+.tab-title {
+    float: left;
+    margin-top: 2px;
+
+}
+
+.tab-header {
+    height: 23px;
+}
+
+.tab-item {
+    margin-right: 5px;
+    padding: 10px 15px;
+    margin-top: -8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tab-item.active {
+    background-color: hsla(0, 0%, 100%, .2);
+    transition: background-color .3s .2s;
 }
